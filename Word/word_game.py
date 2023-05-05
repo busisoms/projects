@@ -1,3 +1,10 @@
+def score(attempts):
+    if attempts == 0:
+        return 0
+    else:
+        return attempts * 10
+
+
 def word_game():
     import random as r
 
@@ -27,9 +34,12 @@ def word_game():
             print(" ".join(display))
             if "_" not in display:
                 print("You won!")
+                print(f"The word was {selected_word}")
+
                 return True
         elif guess == selected_word:
             print("You Won!!")
+            print(f"The word was {selected_word}")
             return True
 
         else:
@@ -38,6 +48,9 @@ def word_game():
                 f"{guess} is not in the word. Guess again.\nYou have {attempts} attempts left.")
             if "_" in display and attempts == 0:
                 print("You Lose")
+                print(f"The word was {selected_word}")
+                print(f"Your score is {score(attempts)}")
+
                 return True
 
 

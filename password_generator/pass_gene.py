@@ -36,8 +36,8 @@ if __name__ == "__main__":
     randomize = generate(hl)
     if case == "L":
         final = ''.join(randomize)
-        print(f"Here is your password:{final.lower()}")
+        print(f"\nHere is your password: {final.lower()}")
     else:
         case == "U"
         final = ''.join(randomize)
-        print(f"Here is your password: {final.upper()}")
+        print(f"\nHere is your password: {final.upper()}")
